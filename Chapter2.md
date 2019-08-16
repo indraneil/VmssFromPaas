@@ -9,10 +9,10 @@ For now, we will use the portal since it is the easiest one to talk about. We wi
 ## Using the azure portal to create a sample VMSS
 In case you don't have an azure subscription to play with, please start [here](https://azure.microsoft.com/en-us/free/)
 Once you do have an azure subscription, start by logging into the [portal](https://portal.azure.com), selecting the "Create a resource" and then putting "virtual machine scale set" in the search.
-![alt text](images/ch2_1.png "create a new VMSS")
+![alt text](images/ch2_1.PNG "create a new VMSS")
 
 You should see a screen similar to this one show up
-![alt text](images/ch2_2.png "choose values for a new VMSS")
+![alt text](images/ch2_2.PNG "choose values for a new VMSS")
 You are being asked to make a few selections which immediately exposes you to some new concepts. Lets walk through them 1-by-1
 
 ### Possible new concepts while creating a VMSS
@@ -23,7 +23,7 @@ You are being asked to make a few selections which immediately exposes you to so
   * **Availability zone**: This is a way to protect your service from datacenter-wide failures. See [explanation](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
 ## But wait, there is more data to fill!
-![alt text](images/ch2_3.png "VM related information")
+![alt text](images/ch2_3.PNG "VM related information")
 ### More new concepts
 * Instance count and size should make sense because they were the same in PAAS, though the size names are [different](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) now.
 * However, there are a few new things like
@@ -32,7 +32,7 @@ You are being asked to make a few selections which immediately exposes you to so
   * **Autoscale**: If you have used [scaling](https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-how-to-scale-portal) your cloud service size up or down based on load before, this should be familiar already. If you haven't done this, please read up about on [autoscale for VMSS](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview)
 
 ## And even more!
-![alt text](images/ch2_4.png "Network related information")
+![alt text](images/ch2_4.PNG "Network related information")
 * And now we get to networking preferences, where you are first given a choice between [Application gateway](https://docs.microsoft.com/en-us/azure/application-gateway/overview) and a [load balancer](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview)
   * If you are unsure about networking, and all you care for is HTTP/HTTPS traffic (which may be all you used in PAAS), going with application gateway is a fine choice
   * If you need to support other forms of traffic (e.g. UDP), or are ready to leverage other traffic splitting patterns, or are exploring solutions like [service fabric](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview), then load balancer is the better choice
