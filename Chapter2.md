@@ -50,3 +50,5 @@ However, almost everything in VMSS literature assumes secrets are kept in Azure 
 ### FAQ on VMSS
 VMSS has an excellent page on [frequently asked questions](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq).
 It answers a bunch of common asks from customers and you should read through it to be see if it helps answer any remaining questions for you.
+
+**Navigation**: <a href="Introduction.md">First<a> | <a href="Chapter1.md">Prev</a> | <a href="Chapter3.md">Next</a> | <a href="Chapter6.md">Last</a>
