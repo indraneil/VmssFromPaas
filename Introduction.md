@@ -27,3 +27,5 @@ In broad terms, you have to decide
 * How you would want to deploy
 
 Once you have done that all, you will have your service running on VMSS and a world of customization-options open up for you from there on
+
+**Navigation**: First | Prev | <a href="Chapter1.md">Next</a> | <a href="Chapter6.md">Last</a>
