@@ -40,3 +40,5 @@ Azure resources like VNets/IP Addresses/VMSS can also be explored via the comman
 It is available at https://resources.azure.com/ and you can read more about it [here](https://azure.microsoft.com/en-us/blog/azure-resource-explorer-a-new-tool-to-discover-the-azure-api/)
 
 Hopefully, after playing around with all this, you have a general feel for VMSS and how it can be used
+
+**Navigation**: <a href="Introduction.md">First<a> | <a href="Chapter2.md">Prev</a> | <a href="Chapter4.md">Next</a> | <a href="Chapter6.md">Last</a>
