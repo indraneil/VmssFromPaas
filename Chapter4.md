@@ -33,3 +33,5 @@ RBAC is the idea that every resource has common usage/access patterns, which can
   * as a combined identity, where by the app can only get access if launched by a specific user or group of users
 
 Start [here](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) if you want to learn more about RBAC
+
+**Navigation**: <a href="Introduction.md">First<a> | <a href="Chapter3.md">Prev</a> | <a href="Chapter5.md">Next</a> | <a href="Chapter6.md">Last</a>
