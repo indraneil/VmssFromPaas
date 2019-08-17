@@ -48,3 +48,5 @@ If your service has exisiting logging/telemetry that should keep working after b
   * It should be able to get the VMSS password from the key vault created as part of prereq script
 
 > If you have gotten this far, you are well on your way to successfully transition to VMSS. Congratulations!
+
+**Navigation**: <a href="Introduction.md">First<a> | <a href="Chapter5.md">Prev</a> | Next | Last
