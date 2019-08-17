@@ -39,3 +39,5 @@ The difference between the 2 types of roles in cloud service is the lack of [IIS
 * Do you use [VIP swap](https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-how-to-manage-portal#swap-deployments-to-promote-a-staged-deployment-to-production) or [in-place upgrade](https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-update-azure-service#how-an-upgrade-proceeds)?
 
 Once you have a checklist of such questions and have answered them, you have a good sense of what you are about to emulate in the VMSS world.
+
+**Navigation**: <a href="Introduction.md">First<a> | <a href="Introduction.md">Prev</a> | <a href="Chapter2.md">Next</a> | <a href="Chapter6.md">Last</a>
