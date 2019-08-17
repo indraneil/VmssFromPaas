@@ -59,3 +59,5 @@ VMSS supports an [extension framework](https://docs.microsoft.com/en-us/azure/vi
 
 [Custom script extensions](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/custom-script-windows) allows us to push scripts into VMs to install and configure the VMs to suit our needs. It is a convenient way to do common operations in PAAS with the VMSS framework, e.g. run startup tasks, bind certs to SSL, install and launch your application, etc.
 * There is 1 important caveat that holds true in the summer of 2019. Initiating reboots via custom extensions isn't supported.
+
+**Navigation**: <a href="Introduction.md">First<a> | <a href="Chapter4.md">Prev</a> | <a href="Chapter6.md">Next</a> | <a href="Chapter6.md">Last</a>
