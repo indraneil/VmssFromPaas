@@ -2,7 +2,7 @@
 Running a service on azure cloud has been synonymous with the [PAAS](https://en.wikipedia.org/wiki/Platform_as_a_service) offering called [CloudService](https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-choose-me) for a long while.
 While newer offerings like [Webjobs](https://docs.microsoft.com/en-us/azure/app-service/webjobs-create) and [Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview) showed up, people who needed control of the VM hosting the services, had no choice but to stick to CloudServices.
 
-However, a few years ago, Azure unveiled [Virtual Machine Scale Sets](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview) (VMSS) and it became a contender to CloudService.
+However, a few years ago, Azure unveiled [Virtual Machine Scale Sets](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview) (VMSS) and it became a contender to CloudService, so it is worth understanding if you should switch and how would you go about it.
 
 ## What is VMSS?
 VMSS is an [IAAS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service) play from Microsoft and allows VM operations (create/restart etc.) to be applied at a full set of VMs (upto 1000 right now) with 1 command.
@@ -27,5 +27,14 @@ In broad terms, you have to decide
 * How you would want to deploy
 
 Once you have done that all, you will have your service running on VMSS and a world of customization-options open up for you from there on
+
+## How is this booklet laid out?
+* Introduction: You are here right now
+* <a href="Chapter1.md">Analyse your existing PAAS cloud service</a>
+* <a href="Chapter2.md">Concepts about creating a sample VMSS</a>
+* <a href="Chapter3.md">Concepts about exploring a running VMSS</a>
+* <a href="Chapter4.md">Understanding ARM and RBAC, which didn't exist when cloud services were created</a>
+* <a href="Chapter5.md">General concepts to consider when porting your PAAS application</a>
+* <a href="Chapter6.md">Specific things to build when porting your PAAS application</a>
 
 **Navigation**: First | Prev | <a href="Chapter1.md">Next</a> | <a href="Chapter6.md">Last</a>
