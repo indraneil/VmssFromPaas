@@ -6,6 +6,8 @@ We should start by creating a toy virtual machine scale set and then exploring t
 
 For now, we will use the portal since it is the easiest one to talk about. We will discuss the others at a later point of time
 
+> This chapter and the <a href="Chapter3.md">next one</a> are most likely to become outdated and look different from when you look at it. So use this chapter as a way to understand the background concepts.
+
 ## Using the azure portal to create a sample VMSS
 In case you don't have an azure subscription to play with, please start [here](https://azure.microsoft.com/en-us/free/)
 Once you do have an azure subscription, start by logging into the [portal](https://portal.azure.com), selecting the "Create a resource" and then putting "virtual machine scale set" in the search.
