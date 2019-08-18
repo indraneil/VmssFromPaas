@@ -29,7 +29,7 @@ In broad terms, you have to decide
 
 Once you have done that all, you will have your service running on VMSS and a world of customization-options open up for you from there on
 
-## How is this booklet laid out?
+## How this booklet is laid out
 * Introduction: You are here right now
 * <a href="Chapter1.md">Analyse your existing PAAS cloud service</a>
 * <a href="Chapter2.md">Concepts about creating a sample VMSS</a>
