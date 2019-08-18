@@ -12,6 +12,7 @@ VMSS is an [IAAS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service) pla
 * You get better control on the networking with [VNets](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview), [NSGs](https://docs.microsoft.com/en-us/azure/virtual-network/security-overview), [load balancers](https://docs.microsoft.com/en-us/azure/load-balancer/), [IP addresses](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-public-ip-address) etc. being supported as first class objects
 * You can configure the VMs in numerous ways using [extensions](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/features-windows) like PowerShell Desired State configurations ([DSC](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview)) or [Bitlocker](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption-overview)
 * Like cloud services, you can get regular [OS upgrades](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)
+* However, at the end of it all, you just get a set of VMs, and you decide how to deploy and run your application on it. It neither blocks you from running anything, nor suggests a specific way to run something.
 
 All things considered, if you decide you need more control - and not less - VMSS is a good choice.
 
