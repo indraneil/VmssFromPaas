@@ -3,6 +3,7 @@ Now that we have created a test virtual machine scale set, lets poke arouund a b
 
 ## Exploring via the portal
 The portal is reachable at https://portal.azure.com/
+> This chapter and the <a href="Chapter2.md">previous one</a> are most likely to become outdated and look different from when you look at it. So use this chapter as a way to understand the background concepts
 
 ### Start with the objects in the resource group
 ![alt text](images/ch3_1.png "Looking at the new resource group")
