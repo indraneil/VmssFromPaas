@@ -14,11 +14,6 @@ Similarly, if the key vault needs to be bootstrapped with secrets (e.g. the VMSS
 #### Create or update AAD application
 If you start using RBAC, you will need to have AAD applications created, client certificates/secrets generated and published to AAD. You should do those in the prereq script as well.
 
-## Create a runtime library that abstracts the differences between PAAS and VMSS
-Your service likely makes a bunch of calls to RoleEnvironment class to discover RoleName/Instance Id/Configuration values etc. In stead of directly calling the RoleEnvironment class, provide a facade that detects Cloud Service or VMSS (for example, maybe look for [metadata service](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service) and then abstract the calls by providing your own implementation that you deem suitable for VMSS). You may already be doing something similar for mocking the calls for unit testing, so this isn't that big a leap.
-
-One interesting thing is that if you are looking for instance Id, you should read [this page](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-instance-ids#scale-set-vm-computer-name) since VMSS uses hexatrigesimal (base36) numbering for VMs.
-
 ## Modify your build
 There are a few new things you should consider doing as part of your build.
 
@@ -30,10 +25,25 @@ Your build may be outputting a [cspkg file](https://docs.microsoft.com/en-us/azu
 
 You can also choose to upload your template and zipped service binaries to some private storage at this point (to be deployed from later).
 
+## Create a runtime library that abstracts the differences between PAAS and VMSS
+Your service likely makes a bunch of calls to RoleEnvironment class to discover RoleName/Instance Id/Configuration values etc. In stead of directly calling the RoleEnvironment class, provide a facade that detects Cloud Service or VMSS (for example, maybe look for [metadata service](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service) and then abstract the calls by providing your own implementation that you deem suitable for VMSS). You may already be doing something similar for mocking the calls for unit testing, so this isn't that big a leap.
+
+### What to do if you use cscfg files today
+There isn't a good answer here, because the cscfg file was used in 2 ways
+* Instance information, e.g. role name and count --> The [Metadata service](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service) is a drop-in replacement for this
+* Application configuration, which there does not seem to have good equivalence in the VMSS world.
+
+To handle the application specific things, 
+* One option here is to upload the exisiting .cscfg file into the VMs, and let this runtime library intercept calls to GetConfigurationSettingValue and read it off this local file.
+* Similarly, if you use local resources, then you can get your library to intercept calls to GetLocalResourceRootPath and dole out directories from some well known location in the VM.
+
+One interesting thing is that if you are looking for instance Id, you should read [this page](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-instance-ids#scale-set-vm-computer-name) since VMSS uses hexatrigesimal (base36) numbering for VMs.
+
 ## Create an entrypoint script to be invoked as a custom extension
 As part of the deployment, your zipped up service, related configuration, and this entry point script will be pushed into the azure VMs. 
 * The entry point script will then be invoked as a custom extension, at which point, plan on unzipping your service and launching it passing it the configuration.
 * Also remember to place your configuration at a place that is accessible to your runtime library
+
 
 ## Decide on how you are deploying your build
 You should have a formal way to deploy your official build. 
