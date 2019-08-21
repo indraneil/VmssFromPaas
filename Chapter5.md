@@ -26,7 +26,7 @@ The general patterns for VMSS are to create
   * [onStart and onStop](https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-role-lifecycle-dotnet) events can not be handled yet though I am told the support for onStop is likely coming.
   * While worker roles had no choice but to use RoleEntryPoint, if you are using web roles, please consider using the Asp.Net lifecycle events like [Application_Start or Application_End](https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-role-lifecycle-dotnet). This will making porting your app to VMSS easier. For now, it appears that your code will have to handle "disgraceful" shutdowns on its own.
 * If you depend on [RoleEnvironment](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.aspx) variables, most of the azure specific ones have been ported to [Azure Instance Metadata Service](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service)
-  * However, there is no support for user provided values coming from cscfg files. There are a few things you can do to mitigate this. We shall revisit this problem at a later point.
+  * However, there is no support for user provided values coming from cscfg files. There are a few things you can do to mitigate this. We shall revisit this problem in <a href="Chapter6.md">Chapter 6</a>.
 * If you use [startup tasks](https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-startup-tasks), you should plan to switch over to custom extensions.
 
 ## Using external storages with your service
