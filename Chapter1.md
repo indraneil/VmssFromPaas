@@ -1,5 +1,5 @@
 # Analyse your existing PAAS cloud service
-To recreate the cloud service in VMSS, you need to have a good sense of what you are building. So start by analysing what you currently do. 
+To recreate the cloud service in VMSS, you need to have a good sense of what you are building. So start by analysing what you currently do. Once you have a checklist of those things, you have a good sense of what you are about to emulate in the VMSS world.
 
 ## Web and worker roles
 The difference between the 2 types of roles in cloud service is the lack of [IIS being enabled](https://stackoverflow.com/questions/7118942/in-windows-azure-what-are-web-role-worker-role-and-vm-role) in Worker role. However, you should enumerate how many of each role types your service has (e.g. you may have a cloud service with 3 worker role types). Also check the following related information
@@ -37,7 +37,5 @@ The difference between the 2 types of roles in cloud service is the lack of [IIS
 * Do you use [azure powershell commandlets](https://docs.microsoft.com/en-us/powershell/azure/overview?view=azps-1.1.0) or something similar?
 * Do you use [management certificates](https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates) or [RBAC](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) for your deployment?
 * Do you use [VIP swap](https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-how-to-manage-portal#swap-deployments-to-promote-a-staged-deployment-to-production) or [in-place upgrade](https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-update-azure-service#how-an-upgrade-proceeds)?
-
-Once you have a checklist of such questions and have answered them, you have a good sense of what you are about to emulate in the VMSS world.
 
 **Navigation**: <a href="Introduction.md">First<a> | <a href="Introduction.md">Prev</a> | <a href="Chapter2.md">Next</a> | <a href="Chapter6.md">Last</a>
