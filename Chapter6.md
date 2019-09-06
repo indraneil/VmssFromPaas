@@ -44,6 +44,8 @@ As part of the deployment, your zipped up service, related configuration, and th
 * The entry point script will then be invoked as a custom extension, at which point, plan on unzipping your service and launching it passing it the configuration.
 * Also remember to place your configuration at a place that is accessible to your runtime library
 
+### Create a hosting/launching process for your DLL
+Cloud service uses WaWorkerHost.exe or WaIISHost.exe to host and launch your DLLs, and you now need something new to do it for you. For your web roles, IIS can handle this, if you are installing that ([sample code](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/virtual-machines/windows/tutorial-automate-vm-deployment.md)). However you will need something similar for worker roles. Whatever you build, you should configure it such that it is relaunched if the VM reboots (note that custom extensions don't run on reboots).
 
 ## Decide on how you are deploying your build
 You should have a formal way to deploy your official build. 
