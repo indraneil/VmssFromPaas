@@ -47,6 +47,8 @@ As part of the deployment, your zipped up service, related configuration, and th
 ### Create a hosting/launching process for your DLL
 Cloud service uses WaWorkerHost.exe or WaIISHost.exe to host and launch your DLLs, and you now need something new to do it for you. For your web roles, IIS can handle this, if you are installing that ([sample code](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/virtual-machines/windows/tutorial-automate-vm-deployment.md)). However you will need something similar for worker roles. Whatever you build, you should configure it such that it is relaunched if the VM reboots (note that custom extensions don't run on reboots).
 
+Read this [article](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/?view=aspnetcore-2.2#set-up-a-process-manager) which explains this idea more generally in the context of Asp.Net core apps. It also leads to useful pointers on how to use [Http.Sys](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/httpsys?view=aspnetcore-2.2) or [Kestrel](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-2.2) to do the same.
+
 ## Decide on how you are deploying your build
 You should have a formal way to deploy your official build. 
 * It can be as simple as a [script that deploys your templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy) with AAD credentials.
