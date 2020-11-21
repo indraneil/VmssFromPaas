@@ -32,7 +32,7 @@ The general patterns for VMSS are to create
 ## Using external storages with your service
 Using external storages with your service will look pretty much the same except for the part where you locate your conection string.
 * If you are currently using certificates to authenticate, you can continue to do so. 
-* If there are encrypted secrets in your cscfg file, this will need to be handled differently, and we shall revisit this again soon.
+* If there are encrypted secrets or cert thumbprints in your cscfg file, this will need to be handled differently, and we talk about it in <a href="Chapter6.md">Chapter 6</a>.
 * One important new possibility is the use of RBAC (see <a href="Chapter4.md">Chapter 4</a>) to connect to your storages. An example of how to grant identities access to azure storage is [here](https://docs.microsoft.com/en-us/azure/storage/common/storage-auth-aad-rbac-portal?toc=%2fazure%2fstorage%2fblobs%2ftoc.json) and then how your code can leverage that access is [here](https://docs.microsoft.com/en-us/azure/storage/common/storage-auth-aad-app?toc=%2fazure%2fstorage%2fblobs%2ftoc.json)
 
 ## Using certificates with your service
