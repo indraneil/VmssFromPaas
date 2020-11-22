@@ -29,13 +29,16 @@ In broad terms, you have to decide
 
 Once you have done that all, you will have your service running on VMSS and a world of customization opens up for you from there on.
 
-## How this booklet is laid out
+## How this booklet is laid out (with pointers for a quick skim)
 * Introduction: You are here right now
-* <a href="Chapter1.md">Analyse your existing PAAS cloud service</a>
+* <a href="Chapter1.md">Analyse your existing PAAS cloud service</a> 
+  * <b> In a rush? Start here.</b>
 * <a href="Chapter2.md">Concepts about creating a sample VMSS</a>
 * <a href="Chapter3.md">Concepts about exploring a running VMSS</a>
 * <a href="Chapter4.md">Understanding ARM and RBAC, which didn't exist when cloud services were created</a>
 * <a href="Chapter5.md">General concepts to consider when porting your PAAS application</a>
+  * <b> In a rush? Read this next.</b>
 * <a href="Chapter6.md">Specific things to build when porting your PAAS application</a>
+  * <b> In a rush? Finish with this.</b>
 
 **Navigation**: First | Prev | <a href="Chapter1.md">Next</a> | <a href="Chapter6.md">Last</a>
