@@ -42,3 +42,5 @@ Once you have done that all, you will have your service running on VMSS and a wo
   * <b> In a rush? Finish with this.</b>
 
 **Navigation**: First | Prev | <a href="Chapter1.md">Next</a> | <a href="Chapter6.md">Last</a>
+
+**Quick Skim**: <a href="Chapter1.md">First</a> | <a href="Chapter5.md">Second</a> | <a href="Chapter6.md">Last</a>
